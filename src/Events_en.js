@@ -9,9 +9,9 @@ const lightTextColor = '#999999';
 const dateTextColor = '#355e86';
 const textFontSize = 23;
 const textFontTitle = 32;
-const textFontVote = 24;
+const textFontVote = 28;
 
-const Events_2 = () => {
+const Events_en = () => {
 
 
 
@@ -32,22 +32,32 @@ const Events_2 = () => {
                 <View style={styles.container}>
                     {/* Box 1 */}
                     <View style={styles.box}>
-                        <Image source={require('./images/kirjasto.jpg')} style={styles.image} />
+                        <Image source={require('./images/grillaus.jpg')} style={styles.image} />
                         <View style={styles.textContainer}>
-                            <Text style={[styles.text, { color: darkTextColor, fontSize: textFontTitle, fontWeight: 'bold', marginBottom: 35 }]}>Vapaaehtoinen nettiapu</Text>
-                            <Text style={[styles.text, { color: lightTextColor, fontSize: textFontSize, fontWeight: 'bold', marginBottom: 4 }]}>Kysy apua</Text>
-                            <Text style={[styles.text, { color: dateTextColor, fontSize: textFontSize, fontWeight: 'bold' }]}>Auta vapaaehtoisena</Text>
+                            <Text style={[styles.text, { color: darkTextColor, fontSize: textFontTitle, fontWeight: 'bold', marginBottom: 35 }]}>Grilling and lunch together</Text>
+                            <Text style={[styles.text, { color: lightTextColor, fontSize: textFontSize, fontWeight: 'bold', marginBottom: 4 }]}>Thursday 18.00 - 20.00</Text>
+                            <Text style={[styles.text, { color: dateTextColor, fontSize: textFontSize, fontWeight: 'bold' }]}>Kotikatu 1</Text>
+                        </View>
+                        <View style={styles.starContainer}>
+                            <Image source={require('./images/star.png')} style={styles.star} />
+                            <Text style={[styles.text_2, { color: darkTextColor, fontSize: textFontVote, fontWeight: 'bold' }]}>I'm in!</Text>
+
                         </View>
 
                     </View>
 
                     {/* Box 2 */}
                     <View style={styles.box}>
-                        <Image source={require('./images/helpdesk.jpeg')} style={styles.image} />
+                        <Image source={require('./images/pihatalkoot.jpg')} style={styles.image} />
                         <View style={styles.textContainer}>
-                            <Text style={[styles.text, { color: darkTextColor, fontSize: textFontTitle, fontWeight: 'bold', marginBottom: 35 }]}>Palveluntarjoajan apulinja</Text>
-                            <Text style={[styles.text, { color: lightTextColor, fontSize: textFontSize, fontWeight: 'bold', marginBottom: 4 }]}>Puhelu, Video, Kotikäynti, Tekoäly</Text>
-                            <Text style={[styles.text, { color: dateTextColor, fontSize: textFontSize, fontWeight: 'bold' }]}>Avoinna 24h</Text>
+                            <Text style={[styles.text, { color: darkTextColor, fontSize: textFontTitle, fontWeight: 'bold', marginBottom: 35 }]}>Yard cleaning</Text>
+                            <Text style={[styles.text, { color: lightTextColor, fontSize: textFontSize, fontWeight: 'bold', marginBottom: 4 }]}>This saturday - 12.00 </Text>
+                            <Text style={[styles.text, { color: dateTextColor, fontSize: textFontSize, fontWeight: 'bold' }]}>Kotikatu 1 </Text>
+                        </View>
+                        <View style={styles.starContainer}>
+                            <Image source={require('./images/star.png')} style={styles.star} />
+                            <Text style={[styles.text_2, { color: darkTextColor, fontSize: textFontVote, fontWeight: 'bold' }]}>I'm in!</Text>
+
                         </View>
 
                     </View>
@@ -58,8 +68,10 @@ const Events_2 = () => {
                 <View style={[styles.container, styles.bottomContainer]}>
                     {/* Box 1 */}
                     <View style={styles.box_2}>
+                        <Image source={require('./images/mailpost.png')} style={styles.mail} />
                         <View style={styles.textContainer_2}>
-                            <Text style={[styles.text_3, { color: darkTextColor, fontSize: textFontTitle, fontWeight: 'bold' }]}>
+                            <Text style={[styles.text_3, { color: darkTextColor, fontSize: textFontVote, fontWeight: 'bold' }]}>
+                                Your own idea!
                             </Text>
                         </View>
                     </View>
@@ -112,8 +124,8 @@ const styles = StyleSheet.create({
         minWidth: 380,
         height: 120,
         width: '40%',
-        maxWidth: 800,
-        backgroundColor: '#ffffff',
+        maxWidth: 400,
+        backgroundColor: '#e5d95d',
         flexDirection: 'row',
         marginVertical: 10,
         borderRadius: 20,
@@ -149,6 +161,9 @@ const styles = StyleSheet.create({
         marginBottom: 'auto',
         marginTop: 'auto',
         marginVertical: 10,
+        borderRadius: 10,
+        borderWidth: 3,
+        borderColor: '#e0d56f',
     },
     text: {
         fontFamily: 'Roboto',
@@ -185,4 +200,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default Events_2;
+export default Events_en;

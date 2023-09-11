@@ -11,16 +11,16 @@ const textFontSize = 23;
 const textFontTitle = 32;
 const textFontVote = 24;
 
-const Events = () => {
+const Events_fi = () => {
 
 
 
     const navigate = useNavigate();
     const handlePageChange = (direction) => {
         if (direction === 'left') {
-            navigate('/');
+            navigate('/fi');
         } else {
-            navigate('/');
+            navigate('/fi');
         }
     };
 
@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
         minWidth: 380,
         height: 120,
         width: '40%',
-        maxWidth: 800,
+        maxWidth: 400,
         backgroundColor: '#e5d95d',
         flexDirection: 'row',
         marginVertical: 10,
@@ -200,4 +200,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default Events;
+export default Events_fi;

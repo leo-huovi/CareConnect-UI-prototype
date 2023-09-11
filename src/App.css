@@ -13,6 +13,7 @@ p {
 }
 
 h1 {
+  margin-top: 2px;
   font-size: 60px;
   color: #ADE6E4;
   -webkit-text-stroke-width: 2px;
