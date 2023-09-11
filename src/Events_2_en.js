@@ -7,11 +7,7 @@ import {useNavigate} from "react-router-dom";
 const darkTextColor = '#000000';
 const lightTextColor = '#999999';
 const dateTextColor = '#355e86';
-<<<<<<< HEAD
 const textFontSize = 22;
-=======
-const textFontSize = 18;
->>>>>>> origin/master
 const textFontTitle = 30;
 const textFontVote = 24;
 

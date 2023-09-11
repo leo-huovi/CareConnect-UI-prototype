@@ -40,8 +40,6 @@ function Main_en() {
     useEffect(() => {
         if (gridContainerRef.current) {
             const gridContainerHeight = gridContainerRef.current.clientHeight;
-            const arrowContainer = document.getElementById('arrow-container');
-            arrowContainer.style.marginTop = `${gridContainerHeight}px`;
         }
     }, []);
 
