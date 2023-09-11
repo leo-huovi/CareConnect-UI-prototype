@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Link, Switch, useNavigate } from 'react
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 
-function Main() {
+function Main_en() {
     const [activeIndex, setActiveIndex] = useState(null);
     const navigate = useNavigate();
     const gridContainerRef = useRef(null); // Ref for gridContainer
@@ -50,31 +50,31 @@ function Main() {
 
     return (
         <div className={css(styles.container)}>
-            <h1>CareConnect - Palvelu</h1>
+            <h1>CareConnect Service Hub</h1>
 
             <div className={css(styles.gridContainer)}>
                 <div
                     className={`button ${activeIndex === 0 ? css(styles.animate) : ''}`}
                     onClick={() => handleClick(0)}
                 >
-                    <img src={require('./images/town.png')} alt="Talon tapahtumat" className={css(styles.image)} />
-                    <p>Talon tapahtumat</p>
+                    <img src={require('./images/town.png')} alt="Neighborhood events" className={css(styles.image)} />
+                    <p>Neighborhood events</p>
                 </div>
 
                 <div
                     className={`button ${activeIndex === 1 ? css(styles.animate) : ''}`}
                     onClick={() => handleClick(1)}
                 >
-                    <img src={require('./images/keys.png')} alt="Oma asuntosi" className={css(styles.image)} />
-                    <p>Oma asuntosi</p>
+                    <img src={require('./images/keys.png')} alt="Your apartment" className={css(styles.image)} />
+                    <p>Your apartment</p>
                 </div>
 
                 <div
                     className={`button ${activeIndex === 2 ? css(styles.animate) : ''}`}
                     onClick={() => handleClick(2)}
                 >
-                    <img src={require('./images/fixing.png')} alt="Onko jokin rikki?" className={css(styles.image)} />
-                    <p>Onko jokin rikki?</p>
+                    <img src={require('./images/fixing.png')} alt="Something broken?" className={css(styles.image)} />
+                    <p>Is something broken?</p>
                 </div>
 
 
@@ -82,8 +82,8 @@ function Main() {
                     className={`button ${activeIndex === 3 ? css(styles.animate) : ''}`}
                     onClick={() => handleClick(3)}
                 >
-                    <img src={require('./images/medicine.png')} alt="Terveys" className={css(styles.image)} />
-                    <p>Terveys</p>
+                    <img src={require('./images/medicine.png')} alt="Health help" className={css(styles.image)} />
+                    <p>Health help</p>
                 </div>
 
 
@@ -100,34 +100,34 @@ function Main() {
                     className={`button ${activeIndex === 4 ? css(styles.animate) : ''}`}
                     onClick={() => handleClick(4)}
                 >
-                    <img src={require('./images/company.png')} alt="Lähiseudun ryhmät"
+                    <img src={require('./images/company.png')} alt="Local groups"
                          className={css(styles.image)} />
-                    <p>Lähiseudun ryhmät</p>
+                    <p>Local groups</p>
                 </div>
 
                 <div
                     className={`button ${activeIndex === 5 ? css(styles.animate) : ''}`}
                     onClick={() => handleClick(5)}
                 >
-                    <img src={require('./images/sports.png')} alt="Liikuntapalvelut" className={css(styles.image)} />
-                    <p>Liikuntapalvelut</p>
+                    <img src={require('./images/sports.png')} alt="Fitness for you" className={css(styles.image)} />
+                    <p>Fitness for you</p>
                 </div>
 
                 <div
                     className={`button ${activeIndex === 6 ? css(styles.animate) : ''}`}
                     onClick={() => handleClick(6)}
                 >
-                    <img src={require('./images/school.png')} alt="Lähiseudun kurssit" className={css(styles.image)}
+                    <img src={require('./images/school.png')} alt="Community courses" className={css(styles.image)}
                     />
-                    <p>Lähiseudun kurssit</p>
+                    <p>Community courses</p>
                 </div>
 
                 <div
                     className={`button ${activeIndex === 7 ? css(styles.animate) : ''}`}
                     onClick={() => handleClick(7)}
                 >
-                    <img src={require('./images/chess.png')} alt="Harrastukset" className={css(styles.image)} />
-                    <p>Harrastukset</p>
+                    <img src={require('./images/chess.png')} alt="Gaming friends" className={css(styles.image)} />
+                    <p>Gaming friends</p>
                 </div>
             </div>
 
@@ -188,7 +188,7 @@ const styles = StyleSheet.create({
         animationTimingFunction: 'ease-in-out'
     },
     gridContainer: {
-        fontSize: '24px',
+        fontSize: '20px',
         display: 'grid',
         gridTemplateColumns: 'repeat(4, 1fr)',
         gap: '5px',
@@ -251,4 +251,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default Main;
+export default Main_en;
