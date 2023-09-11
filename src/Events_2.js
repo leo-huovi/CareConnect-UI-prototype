@@ -1,236 +1,188 @@
+import React from 'react';
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import {css} from "aphrodite";
+import {FiChevronLeft, FiChevronRight} from "react-icons/fi";
+import {useNavigate} from "react-router-dom";
 
-import React, { useState, useEffect, useRef } from 'react';
-import './App.css';
-import { StyleSheet, css } from 'aphrodite';
-import { BrowserRouter as Router, Route, Link, Switch, useNavigate } from 'react-router-dom';
-import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+const darkTextColor = '#000000';
+const lightTextColor = '#999999';
+const dateTextColor = '#355e86';
+const textFontSize = 23;
+const textFontTitle = 32;
+const textFontVote = 24;
+
+const Events_2 = () => {
 
 
-function Main() {
-    const [activeIndex, setActiveIndex] = useState(null);
-    const navigate = useNavigate();;
-    const gridContainerRef = useRef(null); // Ref for gridContainer
 
-
-    const handleClick = (index) => {
-        setActiveIndex(index);
-        setTimeout(() => setActiveIndex(null), 550);
-    };
-
-    const ArrowButton = ({ direction, handleClick }) => {
-        return (
-            <button className={css(styles.arrowButton)} onClick={handleClick}>
-                {direction === 'left' ? (
-                    <FiChevronLeft className={css(styles.arrowIcon)} />
-                ) : (
-                    <FiChevronRight className={css(styles.arrowIcon)} />
-                )}
-            </button>
-        );
-    };
-
+    const navigate = useNavigate();
     const handlePageChange = (direction) => {
         if (direction === 'left') {
-            navigate('/events');
+            navigate('/');
         } else {
             navigate('/');
         }
     };
 
-    useEffect(() => {
-        if (gridContainerRef.current) {
-            const gridContainerHeight = gridContainerRef.current.clientHeight;
-            const arrowContainer = document.getElementById('arrow-container');
-            arrowContainer.style.marginTop = `${gridContainerHeight}px`;
-        }
-    }, []);
-
-
-
 
     return (
-        <div className={css(styles.container)}>
-            <h1>CareConnect - Palvelu</h1>
+        <TouchableOpacity onPress={handlePageChange}>
+            <View style={styles.outerContainer}>
+                {/* First Container */}
+                <View style={styles.container}>
+                    {/* Box 1 */}
+                    <View style={styles.box}>
+                        <Image source={require('./images/kirjasto.jpg')} style={styles.image} />
+                        <View style={styles.textContainer}>
+                            <Text style={[styles.text, { color: darkTextColor, fontSize: textFontTitle, fontWeight: 'bold', marginBottom: 35 }]}>Vapaaehtoinen nettiapu</Text>
+                            <Text style={[styles.text, { color: lightTextColor, fontSize: textFontSize, fontWeight: 'bold', marginBottom: 4 }]}>Kysy apua</Text>
+                            <Text style={[styles.text, { color: dateTextColor, fontSize: textFontSize, fontWeight: 'bold' }]}>Auta vapaaehtoisena</Text>
+                        </View>
 
-            <div className={css(styles.gridContainer)}>
-                <div
-                    className={`button ${activeIndex === 0 ? css(styles.animate) : ''}`}
-                    onClick={() => handleClick(0)}
-                >
-                    <img src={require('./images/town.png')} alt="Talon tapahtumat" className={css(styles.image)} />
-                    <p>Talon tapahtumat</p>
-                </div>
+                    </View>
 
-                <div
-                    className={`button ${activeIndex === 1 ? css(styles.animate) : ''}`}
-                    onClick={() => handleClick(1)}
-                >
-                    <img src={require('./images/keys.png')} alt="Oma asuntosi" className={css(styles.image)} />
-                    <p>Oma asuntosi</p>
-                </div>
+                    {/* Box 2 */}
+                    <View style={styles.box}>
+                        <Image source={require('./images/helpdesk.jpeg')} style={styles.image} />
+                        <View style={styles.textContainer}>
+                            <Text style={[styles.text, { color: darkTextColor, fontSize: textFontTitle, fontWeight: 'bold', marginBottom: 35 }]}>Palveluntarjoajan apulinja</Text>
+                            <Text style={[styles.text, { color: lightTextColor, fontSize: textFontSize, fontWeight: 'bold', marginBottom: 4 }]}>Puhelu, Video, Kotikäynti, Tekoäly</Text>
+                            <Text style={[styles.text, { color: dateTextColor, fontSize: textFontSize, fontWeight: 'bold' }]}>Avoinna 24h</Text>
+                        </View>
 
-                <div
-                    className={`button ${activeIndex === 2 ? css(styles.animate) : ''}`}
-                    onClick={() => handleClick(2)}
-                >
-                    <img src={require('./images/fixing.png')} alt="Onko jokin rikki?" className={css(styles.image)} />
-                    <p>Onko jokin rikki?</p>
-                </div>
+                    </View>
 
+                </View>
 
-                <div
-                    className={`button ${activeIndex === 3 ? css(styles.animate) : ''}`}
-                    onClick={() => handleClick(3)}
-                >
-                    <img src={require('./images/medicine.png')} alt="Terveys" className={css(styles.image)} />
-                    <p>Terveys</p>
-                </div>
+                {/* Second Container */}
+                <View style={[styles.container, styles.bottomContainer]}>
+                    {/* Box 1 */}
+                    <View style={styles.box_2}>
+                        <View style={styles.textContainer_2}>
+                            <Text style={[styles.text_3, { color: darkTextColor, fontSize: textFontTitle, fontWeight: 'bold' }]}>
+                            </Text>
+                        </View>
+                    </View>
 
-
-            </div>
-
-            <div className={css(styles.divider)} />
-
-
-            <div className={css(styles.gridContainer)}>
+                </View>
+            </View>
+        </TouchableOpacity>
 
 
 
-                <div
-                    className={`button ${activeIndex === 4 ? css(styles.animate) : ''}`}
-                    onClick={() => handleClick(4)}
-                >
-                    <img src={require('./images/company.png')} alt="Lähiseudun ryhmät"
-                         className={css(styles.image)} />
-                    <p>Lähiseudun ryhmät</p>
-                </div>
-
-                <div
-                    className={`button ${activeIndex === 5 ? css(styles.animate) : ''}`}
-                    onClick={() => handleClick(5)}
-                >
-                    <img src={require('./images/sports.png')} alt="Liikuntapalvelut" className={css(styles.image)} />
-                    <p>Liikuntapalvelut</p>
-                </div>
-
-                <div
-                    className={`button ${activeIndex === 6 ? css(styles.animate) : ''}`}
-                    onClick={() => handleClick(6)}
-                >
-                    <img src={require('./images/school.png')} alt="Lähiseudun kurssit" className={css(styles.image)}
-                    />
-                    <p>Lähiseudun kurssit</p>
-                </div>
-
-                <div
-                    className={`button ${activeIndex === 7 ? css(styles.animate) : ''}`}
-                    onClick={() => handleClick(7)}
-                >
-                    <img src={require('./images/chess.png')} alt="Harrastukset" className={css(styles.image)} />
-                    <p>Harrastukset</p>
-                </div>
-            </div>
-
-            <div className={css(styles.arrowContainer)}>
-                {/* Left arrow button */}
-                <ArrowButton direction="left" handleClick={() => handlePageChange('left')} />
-
-                {/* Right arrow button */}
-                <ArrowButton direction="right" handleClick={() => handlePageChange('right')} />
-            </div>
-
-        </div>
     );
-}
-
+};
 
 const styles = StyleSheet.create({
-    container: {
+
+    body: {
+        height: '100%',
+        width: '100%'
+    },
+    outerContainer: {
+        marginTop: 30,
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         height: '100vh',
         textAlign: 'center',
+
     },
-    divider: {
-        height: '1px',
-        width: '600px',
-        minHeight: '1px',
-        background: 'gray',
-        margin: '20px 0',
-        '@media (max-width: 900px)': {
-            width: '400px',
+    container: {
+        flex: 1,
+        width: '100%',
+        '@media (min-width: 900px)': {
+            width: 800,
         },
-        '@media (max-width: 600px)': {
-            width: '250px',
-        },
+        justifyContent: 'center',
+        alignItems: 'center',
     },
-    animate: {
-        animationName: {
-            '0%': {
-                transform: 'scale(0.85)'
-            },
-            '50%': {
-                transform: 'scale(1.15)'
-            },
-            '100%': {
-                transform: 'scale(0.85)'
-            }
-        },
-        animationDuration: '550ms',
-        animationTimingFunction: 'ease-in-out'
+    box: {
+        height: 200,
+        width: '90%',
+        maxWidth: 1000,
+        backgroundColor: '#C7EDE6',
+        flexDirection: 'row',
+        padding: 16,
+        marginVertical: 10,
+        borderRadius: 20,
     },
-    gridContainer: {
-        display: 'grid',
-        gridTemplateColumns: 'repeat(4, 1fr)',
-        gap: '20px',
-        marginBottom: '20px',
-        '@media (max-width: 900px)': {
-            gridTemplateColumns: 'repeat(2, 1fr)',
-            width: '500px',
-        },
-        '@media (max-width: 600px)': {
-            gridTemplateColumns: '1fr',
-            width: '300px',
-        },
+    box_2: {
+        minWidth: 380,
+        height: 120,
+        width: '40%',
+        maxWidth: 800,
+        backgroundColor: '#ffffff',
+        flexDirection: 'row',
+        marginVertical: 10,
+        borderRadius: 20,
     },
     image: {
-        width: '100px',
-        height: '100px',
+        marginBottom: 'auto',
+        marginTop: 'auto',
+        width: 200,
+        height: 120,
+        borderRadius: 10,
+        borderWidth: 3,
+        borderColor: '#A7ABA6',
     },
-    arrowContainer: {
-        position: 'fixed',
-        display: 'grid',
-        gridTemplateColumns: '1fr 1fr',
-        justifyContent: 'space-between',
-        '@media (max-width: 900px)': {
-            gridTemplateColumns: 'repeat(2, 1fr)',
-            width: '1200px',
-        },
-        '@media (max-width: 600px)': {
-            gridTemplateColumns: '1fr',
-            width: '1200px',
-        },
-        width: '1600px',
-        padding: '0 20px',
-        boxSizing: 'border-box',
-        zIndex: '999',
-        marginTop: '400px',
+    mail: {
+        marginBottom: 'auto',
+        marginTop: 'auto',
+        width: 120,
+        height: 120,
+    },
+    textContainer: {
+        flex: 1,
+        backgroundColor: '#fbfcff',
+        padding: 16,
+        marginLeft: 16,
+        borderRadius: 18,
+    },
+    textContainer_2: {
+        minWidth: 230,
+        marginRight: 200,
+        backgroundColor: '#FFFFFF',
+        flex: 1,
+        marginLeft: 16,
+        marginBottom: 'auto',
+        marginTop: 'auto',
+        marginVertical: 10,
+    },
+    text: {
+        fontFamily: 'Roboto',
+    },
+    text_2: {
+        fontFamily: 'Roboto',
+        flex: 1,
+        padding: 8,
+        borderRadius: 8,
+    },
+    text_3: {
+        fontFamily: 'Roboto',
+        marginLeft: 20
+    },
+    bottomContainer: {
+        alignSelf: 'flex-end',
+        marginTop: 20,
 
     },
+    starContainer: {
+        alignSelf: 'center',
+        position: 'absolute',
+        marginTop: 'auto',
+        right: 20,
+        borderRadius: 40,
+    },
+    star: {
+        alignSelf: 'center',
+        width: 64,
+        height: 64
+    }
 
-    arrowButton: {
-        backgroundColor: 'transparent',
-        border: 'none',
-        outline: 'none',
-        cursor: 'pointer',
-    },
-    arrowIcon: {
-        fontSize: '24px',
-        color: 'teal',
-    },
 
 });
 
-export default Main;
+
+export default Events_2;

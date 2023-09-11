@@ -8,7 +8,17 @@ html, body, #app, #app>div {
   height: 100%
 }
 
+p {
+  margin: 3px;
+}
 
+h1 {
+  font-size: 60px;
+  color: #ADE6E4;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #133b3a;
+  margin-bottom: 2px;
+}
 
 #root {
   min-height: 100vh;

@@ -6,9 +6,10 @@ import {useNavigate} from "react-router-dom";
 
 const darkTextColor = '#000000';
 const lightTextColor = '#999999';
-const greenTextColor = '#00FF00';
-const textFontSize = 16;
+const dateTextColor = '#355e86';
+const textFontSize = 23;
 const textFontTitle = 32;
+const textFontVote = 24;
 
 const Events = () => {
 
@@ -17,9 +18,9 @@ const Events = () => {
     const navigate = useNavigate();
     const handlePageChange = (direction) => {
         if (direction === 'left') {
-            navigate('/events');
+            navigate('/');
         } else {
-            navigate('/index');
+            navigate('/');
         }
     };
 
@@ -31,31 +32,45 @@ const Events = () => {
                 <View style={styles.container}>
                     {/* Box 1 */}
                     <View style={styles.box}>
-                        <Image source={require('./images/company.png')} style={styles.image} />
+                        <Image source={require('./images/grillaus.jpg')} style={styles.image} />
                         <View style={styles.textContainer}>
-                            <Text style={[styles.text, { color: darkTextColor, fontSize: textFontTitle, fontWeight: 'bold', marginBottom: 35 }]}>Text 1</Text>
-                            <Text style={[styles.text, { color: lightTextColor, fontSize: textFontSize }]}>Text 2</Text>
-                            <Text style={[styles.text, { color: greenTextColor, fontSize: textFontSize }]}>Text 3</Text>
+                            <Text style={[styles.text, { color: darkTextColor, fontSize: textFontTitle, fontWeight: 'bold', marginBottom: 35 }]}>Grillausta</Text>
+                            <Text style={[styles.text, { color: lightTextColor, fontSize: textFontSize, fontWeight: 'bold', marginBottom: 4 }]}>Torstaina 18.00 - 20.00</Text>
+                            <Text style={[styles.text, { color: dateTextColor, fontSize: textFontSize, fontWeight: 'bold' }]}>Pihan grillillä</Text>
                         </View>
+                        <View style={styles.starContainer}>
+                            <Image source={require('./images/star.png')} style={styles.star} />
+                            <Text style={[styles.text_2, { color: darkTextColor, fontSize: textFontVote, fontWeight: 'bold' }]}>Olen mukana!</Text>
+
+                        </View>
+
                     </View>
 
                     {/* Box 2 */}
                     <View style={styles.box}>
-                        <Image source={require('./images/company.png')} style={styles.image} />
+                        <Image source={require('./images/pihatalkoot.jpg')} style={styles.image} />
                         <View style={styles.textContainer}>
-                            <Text style={[styles.text, { color: darkTextColor, fontSize: textFontTitle, fontWeight: 'bold', marginBottom: 35 }]}>Text 3</Text>
-                            <Text style={[styles.text, { color: lightTextColor, fontSize: textFontSize }]}>Text 4</Text>
-                            <Text style={[styles.text, { color: greenTextColor, fontSize: textFontSize }]}>Text 5</Text>
+                            <Text style={[styles.text, { color: darkTextColor, fontSize: textFontTitle, fontWeight: 'bold', marginBottom: 35 }]}>Talkoot</Text>
+                            <Text style={[styles.text, { color: lightTextColor, fontSize: textFontSize, fontWeight: 'bold', marginBottom: 4 }]}>Tänä lauantaina - 12.00 </Text>
+                            <Text style={[styles.text, { color: dateTextColor, fontSize: textFontSize, fontWeight: 'bold' }]}>Meidänkatu 1 </Text>
                         </View>
+                        <View style={styles.starContainer}>
+                            <Image source={require('./images/star.png')} style={styles.star} />
+                            <Text style={[styles.text_2, { color: darkTextColor, fontSize: textFontVote, fontWeight: 'bold' }]}>Olen mukana!</Text>
+
+                        </View>
+
                     </View>
+
                 </View>
 
                 {/* Second Container */}
                 <View style={[styles.container, styles.bottomContainer]}>
                     {/* Box 1 */}
                     <View style={styles.box_2}>
+                        <Image source={require('./images/mailpost.png')} style={styles.mail} />
                         <View style={styles.textContainer_2}>
-                            <Text style={[styles.text, { color: darkTextColor, fontSize: textFontTitle, fontWeight: 'bold', marginBottom: 35 }]}>
+                            <Text style={[styles.text_3, { color: darkTextColor, fontSize: textFontTitle, fontWeight: 'bold' }]}>
                                 Ehdota omaa
                             </Text>
                         </View>
@@ -77,6 +92,7 @@ const styles = StyleSheet.create({
         width: '100%'
     },
     outerContainer: {
+        marginTop: 30,
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -98,47 +114,89 @@ const styles = StyleSheet.create({
         height: 200,
         width: '90%',
         maxWidth: 1000,
-        backgroundColor: '#0000FF',
+        backgroundColor: '#C7EDE6',
         flexDirection: 'row',
         padding: 16,
         marginVertical: 10,
         borderRadius: 20,
     },
     box_2: {
-        height: 200,
+        minWidth: 380,
+        height: 120,
         width: '40%',
         maxWidth: 800,
-        backgroundColor: '#8855FF',
+        backgroundColor: '#e5d95d',
         flexDirection: 'row',
-        padding: 16,
         marginVertical: 10,
         borderRadius: 20,
     },
     image: {
-        width: 80,
-        height: 80,
+        marginBottom: 'auto',
+        marginTop: 'auto',
+        width: 200,
+        height: 120,
+        borderRadius: 10,
+        borderWidth: 3,
+        borderColor: '#A7ABA6',
+    },
+    mail: {
+        marginBottom: 'auto',
+        marginTop: 'auto',
+        width: 120,
+        height: 120,
     },
     textContainer: {
         flex: 1,
-        backgroundColor: '#FFFFFF',
+        backgroundColor: '#fbfcff',
         padding: 16,
         marginLeft: 16,
-        borderRadius: 8,
+        borderRadius: 18,
     },
     textContainer_2: {
+        minWidth: 230,
+        marginRight: 200,
+        backgroundColor: '#FFFFFF',
         flex: 1,
-        padding: 16,
         marginLeft: 16,
-        borderRadius: 8,
+        marginBottom: 'auto',
+        marginTop: 'auto',
+        marginVertical: 10,
+        borderRadius: 10,
+        borderWidth: 3,
+        borderColor: '#e0d56f',
     },
     text: {
-        marginBottom: 8,
+        fontFamily: 'Roboto',
+    },
+    text_2: {
+        fontFamily: 'Roboto',
+        flex: 1,
+        padding: 8,
+        borderRadius: 8,
+    },
+    text_3: {
+        fontFamily: 'Roboto',
+        marginLeft: 20
     },
     bottomContainer: {
         alignSelf: 'flex-end',
         marginTop: 20,
 
     },
+    starContainer: {
+        alignSelf: 'center',
+        position: 'absolute',
+        marginTop: 'auto',
+        right: 20,
+        borderRadius: 40,
+    },
+    star: {
+        alignSelf: 'center',
+        width: 64,
+        height: 64
+    }
+
+
 });
 
 

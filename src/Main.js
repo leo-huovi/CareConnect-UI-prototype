@@ -33,7 +33,7 @@ function Main() {
         if (direction === 'left') {
             navigate('/events');
         } else {
-            navigate('/next-page');
+            navigate('/events_2');
         }
     };
 
@@ -232,11 +232,11 @@ const styles = StyleSheet.create({
             gridTemplateColumns: '1fr',
             width: '1200px',
         },
-        width: '1600px',
+        width: '1850px',
         padding: '0 20px',
         boxSizing: 'border-box',
         zIndex: '999',
-        marginTop: '400px',
+        marginTop: '580px',
     },
     arrowButton: {
         backgroundColor: 'transparent',
