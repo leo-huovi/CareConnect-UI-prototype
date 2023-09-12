@@ -236,7 +236,7 @@ const styles = StyleSheet.create({
         padding: '0 20px',
         boxSizing: 'border-box',
         zIndex: '999',
-        marginTop: '580px',
+        marginTop: '30%',
     },
     arrowButton: {
         backgroundColor: 'transparent',
