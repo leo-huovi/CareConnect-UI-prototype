@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
         width: '100%'
     },
     outerContainer: {
-        marginTop: 30,
+        marginTop: 60,
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',

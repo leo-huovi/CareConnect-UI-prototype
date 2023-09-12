@@ -224,14 +224,6 @@ const styles = StyleSheet.create({
         display: 'grid',
         gridTemplateColumns: '1fr 1fr',
         justifyContent: 'space-between',
-        '@media (max-width: 900px)': {
-            gridTemplateColumns: 'repeat(2, 1fr)',
-            width: '1200px',
-        },
-        '@media (max-width: 600px)': {
-            gridTemplateColumns: '1fr',
-            width: '1200px',
-        },
         width: '100%',
         padding: '0 20px',
         boxSizing: 'border-box',
