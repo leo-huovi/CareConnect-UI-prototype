@@ -40,6 +40,8 @@ function Main_en() {
     useEffect(() => {
         if (gridContainerRef.current) {
             const gridContainerHeight = gridContainerRef.current.clientHeight;
+            const arrowContainer = document.getElementById('arrow-container');
+            arrowContainer.style.marginTop = `${gridContainerHeight}px`;
         }
     }, []);
 
@@ -48,7 +50,7 @@ function Main_en() {
 
     return (
         <div className={css(styles.container)}>
-            <h1>CareConnect Service Hub</h1>
+            <h1>CareConnect Hub</h1>
 
             <div className={css(styles.gridContainer)}>
                 <div
@@ -230,7 +232,7 @@ const styles = StyleSheet.create({
             gridTemplateColumns: '1fr',
             width: '1200px',
         },
-        width: '1850px',
+        width: '100%',
         padding: '0 20px',
         boxSizing: 'border-box',
         zIndex: '999',
