@@ -232,7 +232,7 @@ const styles = StyleSheet.create({
             gridTemplateColumns: '1fr',
             width: '1200px',
         },
-        width: '1850px',
+        width: '100%',
         padding: '0 20px',
         boxSizing: 'border-box',
         zIndex: '999',
