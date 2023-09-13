@@ -229,16 +229,19 @@ const styles = StyleSheet.create({
         boxSizing: 'border-box',
         zIndex: '999',
         marginTop: '30%',
+        visibility: 'invisible'
     },
     arrowButton: {
         backgroundColor: 'transparent',
         border: 'none',
         outline: 'none',
         cursor: 'pointer',
+        visibility: 'invisible'
     },
     arrowIcon: {
-        fontSize: '48px',
+        fontSize: '0px',
         color: 'teal',
+        visibility: 'invisible'
     },
 
 });
