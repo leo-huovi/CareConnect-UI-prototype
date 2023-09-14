@@ -236,12 +236,12 @@ const styles = StyleSheet.create({
         border: 'none',
         outline: 'none',
         cursor: 'pointer',
-        visibility: 'invisible'
+        // visibility: 'invisible'
     },
     arrowIcon: {
-        fontSize: '0px',
+        fontSize: '16px',
         color: 'teal',
-        visibility: 'invisible'
+        // visibility: 'invisible'
     },
 
 });
