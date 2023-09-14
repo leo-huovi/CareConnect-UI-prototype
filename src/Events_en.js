@@ -85,6 +85,7 @@ const Events_en = () => {
 
 
     return (
+        <TouchableOpacity onPress={handlePageChange}>
         <View style={styles.outerContainer}>
             {/* First Container */}
             <View style={styles.container}>
@@ -139,6 +140,7 @@ const Events_en = () => {
                 </Animated.View>
             </TouchableOpacity>
         </View>
+        </TouchableOpacity>
     );
 };
 

@@ -229,7 +229,7 @@ const styles = StyleSheet.create({
         boxSizing: 'border-box',
         zIndex: '999',
         marginTop: '30%',
-        visibility: 'invisible'
+        // visibility: 'invisible'
     },
     arrowButton: {
         backgroundColor: 'transparent',
