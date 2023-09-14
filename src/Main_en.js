@@ -239,7 +239,7 @@ const styles = StyleSheet.create({
         // visibility: 'invisible'
     },
     arrowIcon: {
-        fontSize: '16px',
+        fontSize: '40px',
         color: 'teal',
         // visibility: 'invisible'
     },
