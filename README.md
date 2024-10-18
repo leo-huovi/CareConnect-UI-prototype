@@ -9,3 +9,6 @@ CareConnect Hub is a web application that aims to connect people within a commun
 This project is a working visual prototype developed for IHME competition, organized by Metropolia's innovation hubs and co-development platforms.
 
 ![care_connect_vote](https://github.com/leo-huovi/CareConnect-UI-prototype/assets/37000065/cb9c8c3f-3234-4004-b2c3-fedd5f967eca)
+
+
+Demo: [https://care-connect-ui-prototype.vercel.app/](https://care-connect-ui-prototype.vercel.app/)
